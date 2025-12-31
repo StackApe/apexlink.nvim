@@ -21,6 +21,11 @@ P2P collaborative editing for Neovim. Edit files together in real-time with CRDT
 ```lua
 {
   "StackApe/apexlink.nvim",
+  cmd = "ApexLink",  -- Only load when you run :ApexLink
+  keys = {
+    { "<leader>ac", desc = "ApexLink: Create room" },
+    { "<leader>aj", desc = "ApexLink: Join room" },
+  },
   config = function()
     require("apexlink").setup({
       -- Optional: specify daemon path if not in PATH

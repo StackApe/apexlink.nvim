@@ -7,5 +7,5 @@ if exists('g:loaded_apexlink')
 endif
 let g:loaded_apexlink = 1
 
-" Defer loading to lua
-lua require('apexlink').setup()
+" Don't auto-setup - user must call require('apexlink').setup() explicitly
+" This prevents config breakage if daemon isn't installed
